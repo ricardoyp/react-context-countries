@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { useParams } from 'react-router-dom';
+import { Card } from '../components/Card';
 
 export const Country = () => {
     const countriesApi = 'https://restcountries.com/v3.1/name';
@@ -26,7 +27,7 @@ export const Country = () => {
         <>
             <h1>Country</h1>
             {countryData?.map((country) => (
-                    <p>{country.name.common}</p>
+                    <Card character={country}/>
                 ))}
             
         </>
